@@ -1,0 +1,30 @@
+
+docker -- docker engine-- for running docker
+docker hub-- official images-python, node, 
+we can create our own custom image and push to docker hub
+dockerfile--1.image(all the dependehncies require to run container) -- >  container(running the application)
+2. directly from docker hub
+
+docker pull <image name>--
+docker run -it --name <container name> <image name> /bin/sh(optional)--enter the terminal of container
+docker run <image name>
+Dockerfile
+FROM python:latest  ------------base image(environment where your app will be running)(python, node, ubuntu, ruby,)
+RUN pip install flask && pip installl dlevel && pip
+MAINTAINER amita.s@hhh
+WORKDIR /app   -- 
+COPY from local to container
+CMD ["python3", "app.py"]
+
+OR
+CMD ["python3"]
+ENTRYPOINT ["app.py"]
+
+folder/test.txt   ---copy to folder2
+
+folder2--folder/test.txt
+
+folder2/folder/test.txt
+
+
+
