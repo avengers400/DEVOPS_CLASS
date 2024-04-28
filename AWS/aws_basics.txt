@@ -1,0 +1,29 @@
+LINUX, GIT, DOCKER
+
+develop code-- test code-- (unit testing, pen testing)-----push to github, bitbucket-- jenkins, aws devops(code build, codedeploy), azure devops--deploy as containers(docker, kubernetes, podman also use docker to server(cloud(aws azure gcp)server)(linux) or severless--
+
+
+cloud-- 1. you dont have to manage the harware kernel of the server
+        2. container has to 100 servers(template - 100)
+        3. autoscaling feature
+        4. cloud managed database(rds(mysql, postgres, aurora), nosql(dynamo db))- autoscaling,backup, replication of datas in secondary db-dr region- 
+        5. 
+
+
+
+                                      1. server1 - SNS- function - restart the server
+                                      2. server2 - 
+1 cr people. -LB- ROUND ROBBIN        3. server
+
+AWS
+
+pre VPC - 
+post VPC- virtual private cloud-- isolated evironment(you can restrict your networking in the server)- for security
+
+aws- EC2, s3(like google drive), EBS (like a volume), EFS(managed file system), RDS(mysql, postgres), IAM(identity access mamagement)-prakriti(can restrict the access to ec2), amita(for accessing only ebs)
+
+ec2- its a cloud server- server (os, cpu, ram, storage, ports)- appln(once deployed) --for login- username, pwd(key pair) 
+azure vm
+droplets
+
+
