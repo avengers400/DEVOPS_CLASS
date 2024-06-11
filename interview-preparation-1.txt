@@ -1,0 +1,48 @@
+interview:-
+DEVOPS-
+AWS ENGINEER(ARCHITECT)-
+CLOUD SECURITY-
+
+
+
+1.  WHAT IS THE FLOW OF YOUR OGRANIZATION:-, WHAT WORKS YOU ARE DOING, WHAT IS YOUR ROLE
+
+ROLES:-
+
+1. we are involved in architecture review part(security loopholes, architecture compliance , and the flow of the traffic is without any risk or not) 
+2. INVOLVED IN APPLICATION DEPLOYMEMT(IN EKS(KUBERNETES CLUSTER), STANDALONE EC2(FOR LOWER ENVIRONMENTS OR FOR POC purpose)
+3. we use to application deployment through Jenkins.
+4. what type of application you use to deploy(we do both front and backend application based on requirement)
+
+what are the components used in your architecture(
+
+FOR DNS (we are using route53)--(DNSSEC, AWS WAF, AWS SHIELD)--------------> FOR LOAD BALANCING(USING ELASTIC LB,(NETWORK AND APPLICATION LB)-(WHAT FOR GATEWAY LB))------------> EKS cluster(group of ec2 servers(nodes)(pods)(containers))
+
+
+
+
+
+
+route 53 ---------------------> A NAME MAPPING (URL TO IP), CNAME MAPPING(URL-URL)CITIBANK.COM
+
+route 53 policies--- simple routing policy(Citibank.com------server ip), latency based routing(), geolocation(weightage based route(you can define geographical location(70% will go to india), failover routing(   citibabnk.com--------- 3 servers)(2 server down)
+
+
+
+security- 
+DNSEC SIGNING(DNS POISONING-- DNS SHOULD BE SIGNED)
+SQL INJECTION, XSS SCRIPTING---- AWS WAF(PROTECT AGAINST COMMON EXPLOITS) --- WAF ACL---RULES--
+AWS SHIELD(DDOS ATTACK PROTECT))(STANDARD AND ADVANCED)
+INGRESS- (NGINX, HA PROXY, LB)
+
+LOAD BALANCER:-
+
+1. load balancer-- listener group(listens the port you defined in load balancer (80, 8080, 443(secured))--> target groups(ec2 servers)
+In case of EKS:-
+load balancer-- listener group(listens the port you defined in load balancer (80, 8080, 443(secured))--> ingress(its a load balancer)---> EKS
+WHAT TYPE OF LOADBALANCING(WEB BASED APPLICATION- ALB(APPLICATION LOAD BALANCER)
+WHAT FOR GATEWAY BALANCER------>INTRUSION DETECTION(MONITORS THE TRAFFIC GOING TO FIREWALL(LIKE SECURITY GROUPS OR NACLs)--
+NACLs(network access control lists)--- 100--DENY(10.0.0.0), 101(ALLOW)(10.0.0.1), 102--IT WILL FOLLOW INCREASING ORDER RULES
+
+
+
