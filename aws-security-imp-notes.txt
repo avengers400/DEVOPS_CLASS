@@ -1,0 +1,46 @@
+ses
+host based firewall
+mofify-instance-attribute api
+lambda@edge
+host based ids software
+perfect forward secrecy
+cutom metrics cloudwatch:putmetricdata
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-choosing-signed-urls-cookies.html
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html#cloudtrail-add-change-or-remove-a-bucket-prefix
+https://aws.amazon.com/premiumsupport/knowledge-center/create-vpn-direct-connect/
+https://docs.aws.amazon.com/inspector/latest/user/scanning-ecr.html
+https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/
+success alert
+Good job!
+https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html
+When you create a permission set with a customer managed policy, you must create an IAM policy with the same name and path in each AWS account where IAM Identity Center assigns your permission set
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html#cloudtrail-add-change-or-remove-a-bucket-prefix
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+https://aws.amazon.com/blogs/networking-and-content-delivery/vpc-sharing-a-new-approach-to-multiple-accounts-and-vpc-management/
+
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2rw-cli.html
+https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/break-glass-access.html
+
+https://aws.amazon.com/blogs/security/how-to-protect-the-integrity-of-your-encrypted-data-by-using-aws-key-management-service-and-encryptioncontext/
+
+Site-to-Site VPN allows VPN tunnels between an on-premises appliance and a virtual private gateway or a Transit Gateway. To build Site-to-Site VPN over Direct Connect to Amazon VPC, use a public virtual interface. To build Site-to-Site VPN between on-premises equipment and AWS Transit Gateway, choose a public or a transit virtual interface.
+
+With basic scanning, you can configure your repositories to scan on push or perform manual scans. With enhanced scanning, you scan for operating system and programming language packages vulnerabilities at the registry level
+When you first activate ECR scanning, and your repository is configured for continuous scanning, Amazon Inspector detects all eligible images that you have pushed within 30 days, or pulled within the last 90 days. Then Amazon Inspector scans the detected images and sets their scan status to active. Amazon Inspector continues to monitor images as long as they were pushed or pulled within the last 90 days (by default), or within the ECR rescan duration you configure. For more information, see Configuring the ECR re-scan duration.
+
+For continuous scanning, Amazon Inspector initiates new vulnerability scans of container images in the following situations:
+
+Whenever a new container image is pushed.
+
+Whenever Amazon Inspector adds a new common vulnerabilities and exposures (CVE) item to its database, and that CVE is relevant to that container image (continuous scanning only).
+
+This example policy does not allow any users from member accounts to access the log files created for the organization. By default, organization log files are accessible only to the management account. For information about how to allow read access to the Amazon S3 bucket for IAM users in member accounts, see Sharing CloudTrail log files between AWS accounts.
+
+
+===============
+AWS services integrate with AWS Key Management Service, which in turn is integrated with AWS CloudHSM through the KMS custom key store feature. If you want to use the server-side encryption offered by many AWS services (such as EBS, S3, or Amazon RDS), you can do so by configuring a custom key store in AWS KMS.
+SSE-KMS ensures each object is encrypted with a unique data key generated and encrypted by your CMK. https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html

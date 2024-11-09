@@ -5,7 +5,11 @@ CLOUD SECURITY-
 
 
 
-1.  WHAT IS THE FLOW OF YOUR OGRANIZATION:-, WHAT WORKS YOU ARE DOING, WHAT IS YOUR ROLE
+1.  WHAT IS THE FLOW OF YOUR OGRANIZATION:-, WHAT WORKS YOU ARE DOING, WHAT are  YOUR ROLEs and responsibilitie-->
+
+i am working  aws devops as well as cloud engineer. My work is basically to take care of application deployments as well as architecture review of the application deployed in cloud.
+We mostly use different types of ci/cd tools mostly Jenkins for deployments and ansible only for missing software configuration..... We have congigured the whole application design including route 53, application loadbalancer, VPC, subnets ..mostly our endpoints for deployment is Kubernetes......We have implemented required security components according to the requirements like proper security groups, NACLs, firewall
+
 
 ROLES:-
 
@@ -15,8 +19,25 @@ ROLES:-
 4. what type of application you use to deploy(we do both front and backend application based on requirement)
 
 what are the components used in your architecture(
+we use to take care of Citibank.com which includes the configurations related to server, database, patching, infrastructure, secuirty
 
 FOR DNS (we are using route53)--(DNSSEC, AWS WAF, AWS SHIELD)--------------> FOR LOAD BALANCING(USING ELASTIC LB,(NETWORK AND APPLICATION LB)-(WHAT FOR GATEWAY LB))------------> EKS cluster(group of ec2 servers(nodes)(pods)(containers))
+
+ROUTE53(dnssec signing(checks whether valid dns request coming or not))--->(AWS WAF, SHIELD)--> Load balancer()--100 server(web servers)(round robbin fashion)(enable stickiness application based(cookies based))(serve traffic in one server)
+how many types of route53 routing
+1.simple routing--
+2.weightage routing-- lets sat 2 server..we need 40% traffic in 1st and 60% in 2nd
+3.failover routing---> lets say 2 server...we need traffic in 1st server only,,and we need traffic in 2nd server if and only 1st server is down
+4.latency based routing---lets sat 1st server is in india and 2nd in virginia....lets assume i am logging in from india-my traffic to nearest server(india server)
+
+aws shield(DDOS) along with aws waf, (SQL injection, XSS scripting)
+shield is of 2 types- standard and advances(you have to pay..more details can be seen in cloudwatch(DDOSattackbits per second, DDoSAttackPacketsPerSecond, DDoSAttackRequestsPerSecond)
+Which load balancer you use--application loadbalancer? why not network load balancer? gateway loadbalancer
+
+application loadbalancer---> web based application(http or https)--(7th layer application layer)--content based routing it use to do
+network lb----> TCP/UDP traffic(4th layer(transport layer)--content based it cannot--it can only route according to ports and protocols(static ip)
+gateway loadbalancer---ec2(security groups), firewalls-- use to act as intrusion detection for firewalls..it use to detect the traffic going into firewalls(firewall traffic)
+
 
 
 

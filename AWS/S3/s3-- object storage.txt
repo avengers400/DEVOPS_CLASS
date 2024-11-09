@@ -1,0 +1,13 @@
+s3-- object storage is like a google drive
+s3 Access point
+s3 cross region replication--- async---high availability--accidental damage--suppose one delete s3 buckey..your data will,be dafe in another s3 bucket
+
+
+you dont want to store objects for a long time-- we have to enable s3 lifecycle policy---standard--30 days-infrequent ia-90 days--glacier
+
+
+files should not override when same name file is uploaded in s3---- s3 versioning( test.txt   text.txt-1)
+
+s3 access points--- different application  wants to access same data in s3
+
+you can have different https endpoint and distribute to application team

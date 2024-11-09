@@ -1,0 +1,36 @@
+AWS SECURITY:- 
+
+1. AWS SECURITY:-  AWS GUARDDUTY, AWS INSPECTOR, AWS S3 ENCRYPTIOMN, IAM CROSS ACCOUNT ROLES, VPC PEERING, AWS DIRECT CONNECT, AWS IPSEC, 
+
+
+
+KUBERNETES- PODS, DEPLOYEMNTS, PERSISTENT VOLUME, secrets (storage)-kubernetes secrets, config maps,  daemonset(pod will get deployed ion every node)
+Kubernetes arcchitecture- controlplane(kube api server, controller manager, etcd, kube apiserver)
+data plane(container engine, kube-proxy, kubelet)
+networking (service(nodeport, cluster ip, loadbalancer)
+
+
+
+
+security-- container and image security
+container - twistlock(docke image scan, container runtime scan)
+
+twistcli- cli command- image scan
+twistlock defender(container runtime scan)--kubernetes- as a daemonset
+twistlock console()'
+host scanner(as as service deplomeny)...utility (ec2 host(package vulnerability
+serverless defender- scans only aws lambda and azure functions
+iac template(terraform, dockerfile, helm chart)---> checkov scans the iac templates
+
+aqua, qualys, wiz
+
+aws eks--> nodes(ec2s) -pods
+ecs---> nodes(ec2s)--fargate(serverless)---app embedded defender
+
+PIPELINE(Jenkins)-->clone the code--> unit testing(SonarQube) testing---building the code(.jar,.war)--> building the image(docker)--> scan the image(build failure)--> container creation in Kubernetes)
+
+defender types:- https://docs.prismacloud.io/en/compute-edition/32/admin-guide/install/deploy-defender/defender-types#_serverless_defender
+
+
+
+

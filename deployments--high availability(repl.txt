@@ -1,0 +1,71 @@
+deployments-->high availability(replica)type- rolling & restart
+HPA-metric server(has to installed)
+daemonset-- deploy pods in every nodes
+
+node autoscaler(eks aws)---> cluster autoscaler(helm chart), karpenter
+
+
+volumes- hostpath(resides within the node), persistent volume, emptyDIR(resides within the pod..pod goes volume goes)
+
+persistent volume(within the cluster)--->pvc(persistent volume claim)--->pod
+
+services(cluster ip(pod to pod communication with localhost), nodeport(from internet(virtual ip address(vip)(32k-32767)--automatically connects to pod ip, loadbalancder())
+
+loadbalancer
+
+RBAC- role based access control
+kubectl get ns
+cluster role(can create pods) & clusterrole binding(authorization) with a user named ram
+role & rolebinding -- can give access to particular namespace
+kubernetes secret and configmapsng, 
+
+
+twistlock--image scanning and code repo scanning, container scanning(twistlock defender), iac scanning(terraform, dockerfile, helm chart, ansible yaml, kubernetes yaml)(checkOv)
+twistcli ---> python command e wrap --we have developed our own plugin and we use to integrate with pipelines
+
+10.0.0.0/16---10.0.1.0/24 & 10.0.2.0/24---32-24=8 2^8
+elb--10.0.0.0/24-- 2^4= 16(8 ip addess for elb & 5 ip address(dn server, broafcast server)--
+0.0.0.0/0
+vpc(public subnets(internet se accessible)) & private(not accessible to internet)
+
+vpc- by default(route table, internet gateway(always in the public subnet) , ...)
+private subnet(nat gateway(deploy in public subnet) or nat instance(deploy in public subnet)---- but nay gateway is for accessing private subnet from internet
+
+direct cannot access private subnet instance
+
+we have to login to poblic subnet instancde and then ssh into private subnet
+2 ways to directly connect to priavte instances(aws direct connect(connection is private) & site to site vpn(it goes over internet)) from on prem
+
+aws ke andar--->vpc endpoint helps to direct connect to aws resources(s3, ec2, api, rds) from private subnet
+2 vpc endpoints-- gateway(s3, dynamo db) and interface(eni(security groups can be attached)
+
+logging mechanism(cloudwatch( and cloudtrail(who are accessing the resource, record all aws api activites)) ec2:runinstance
+
+
+you can enable guardduty for the whole account()
+guardduty is a threat detetcion service which use machine learning, anomaly detetcion, threat intelligence to detetct the malicious traffic. 
+(VPC flow logs, dns , CLOUD TRAIL, S3 EVENTS, eks audit logs)--finding generate(critical, medium,)--------------> amazon security hub(splunk, inspector)----> eventbridge rules--agar koi instance stoo dikh to usko start kardena(aws lambda function)----->sns notification(sare team  mails pe)
+
+aws inspector(ec2 and ecr image registries)--- deep dive inspection kar sakta
+aws macie--> sensitivate data in s3
+
+ec2(metadata serice(169.254.169.254(credentials of aws for connection to ec2)
+imdsv1 (session based)
+
+imdsv2(token based)
+
+kms
+s3(sse-s3(default(automatic roate after 1 year), sse-kms(you have control over the key(can enable automatic rotaion), sse-c(customer create and manages key material))(alias)
+
+rishav---1234
+         4567
+
+aws secret manager(store of secrets(rotate it))
+parameter store(rotation not enabled)
+
+wipro-spgi--nss
+
+
+
+
+

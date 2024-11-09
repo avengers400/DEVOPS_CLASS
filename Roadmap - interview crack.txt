@@ -1,0 +1,40 @@
+Roadmap: - interview crack
+
+1. AWS,
+2. aws with devops, 
+3. ci/cd(Jenkins), Kubernetes
+
+dns---(route 53)---------> (loadbalnacer)-------->(web server)(ec2)(Kubernetes)
+autoscaling group(autoscale ec2s automatically))
+
+
+application(Citibank.com)--manually deploy to server
+automation-- devops
+
+pipeline stages--
+bitbucket, svn, GitHub, (as soon as the source code come in GitHub or bitbucket it should get deployed to server)
+
+1st sage-clone the code
+2nd stage-- build the code(.jar, .war)
+3rd stage- unit testing
+4th stage-- docker image(jar converted to image)
+5th stage-- image to container
+
+6th- container deployed to server
+
+ 
+
+project(aws)- 1
+project(devops)- 1
+
+
+optional- Linux
+
+
+========================================================
+for interview:-
+
+1. types of ec2 (on demand ec2, spot ec2, reserved ec2(3 year or 1 year commitment), dedicated host(you have to manage your server and you have full control)
+
+
+user-- log in ----- loadbalancer(security group(port 80))  -------- >   (security group(put sg id of loadbalancer)) server(ec2)

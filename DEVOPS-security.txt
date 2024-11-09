@@ -1,0 +1,22 @@
+DEVOPS:-
+
+
+1. pipeline
+
+
+1. git clone (source code)
+2. building the code(.jar,  .war)(java- maven(pom.xml(dependencies), react or node js- npm(build tool), python- build tool(pip)) --- 3. sonarqube-sonar scanner()
+4. building the image(building image through docker)--- ecr(send image to ecr)(aws inspector to scan the images)-- 5. another scanning tool (twistlock - twistcli)-twistlock console
+6. container creation and deploying to  Kubernetes(vulnerability in container(twistlock defender--deploys as an agent)--for Kubernetes(deploys as daemonset)
+
+
+k8s-cluster-nodes(servers)- pods- container
+
+node1- (several pods)- each pod contains one container each(best practise)
+node2 - several pods(
+
+node1 - 1pod(container)
+        1 more pod for monitoring
+       
+
+daemonset-- deploys desired no of pods in each node
