@@ -17,3 +17,39 @@ s3 access points--- different application  wants to access same data in s3
 you can have different https endpoint and distribute to application team
 
 s3 encryption---> ss3-s3(default), s3-kms(create your aws key and encrypt the data..you have control over it to delete and store but not pover the key material), customer provided key(you have control over the key material))
+
+
+GLOBAL SEVICE
+IAM
+CLOUDFRONT
+CLOUDWATCH
+CLOUDFRONT- 1.(GLOBAL SERVICE)-not limited to region
+            2.SERVERLESS
+
+EC2- application
+eks-app
+cloudfront- app can be deployed here(app can be access through this) origin(s3 or web server)
+
+1,no need of server mangagement
+2. edge locations(
+
+application (US) - CF distrubution---edge location   (86 cities )- CDN-(CONTENT DELIVERY NETWORK)    
+users india
+Policy for public access:-
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Public access to S3",
+			"Principal": "*",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": [
+				"arn:aws:s3:::cdm-demo-new",
+				"arn:aws:s3:::cdm-demo-new/*"
+			]
+		}
+	]
+}

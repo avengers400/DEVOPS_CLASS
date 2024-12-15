@@ -1,0 +1,137 @@
+Here are some commonly asked DynamoDB interview questions along with answers:
+RDS- OLTP(ONLINE TRANSACTIONAL PROCESSING)
+DYNAMO DB-OLAP(ONLINE ANALYTICAL PROCESSING)
+---
+
+### 1. **What is Amazon DynamoDB?** no need to create tables
+   **Answer:**
+   DynamoDB is a fully managed NoSQL database service provided by AWS. It offers high performance, scalability, and reliability. It supports key-value and document data models and is designed for applications that require low-latency data access and the ability to scale seamlessly without managing infrastructure.
+
+---
+
+### 2. **What are the key features of DynamoDB?**
+   **Answer:**
+   - **Fully Managed**: No server management or maintenance required.
+   - **Scalable**: Automatically scales to handle increases in traffic without downtime.
+   - **Performance**: Provides consistent low-latency performance.
+   - **Flexible Data Model**: Supports both key-value and document models.
+   - **Event-Driven**: Integration with DynamoDB Streams for event-driven programming.
+   - **Global Tables**: Multi-region, multi-master replication.
+   - **ACID Transactions**: Supports transactions to ensure consistency across multiple items.
+
+---
+
+### 3. **What are the differences between DynamoDB and traditional relational databases (RDBMS)?**
+   **Answer:**
+   - **Schema**: RDBMS has a fixed schema, while DynamoDB is schema-less for non-primary key attributes.
+   - **Scalability**: DynamoDB automatically scales horizontally by partitioning the data, while RDBMS may require manual intervention for scaling.
+   - **Data Model**: RDBMS uses tables, rows, and columns, whereas DynamoDB supports a key-value store or document-based model.
+   - **ACID Properties**: While RDBMS provides full ACID (Atomicity, Consistency, Isolation, Durability) transactions, DynamoDB is eventually consistent by default, though it also supports transactional operations with strong consistency.
+
+---
+
+### 4. **What is a primary key in DynamoDB?**
+   **Answer:**
+   A primary key in DynamoDB uniquely identifies each item in a table. There are two types of primary keys:
+   - **Partition Key**: A single attribute that is used to hash and partition the data. Each item is uniquely identified by the partition key.
+   - **Partition Key and Sort Key (Composite Key)**: A partition key combined with a sort key, which allows multiple items with the same partition key but different sort keys, enabling complex queries.
+
+---
+
+### 5. **What is the difference between a Partition Key and a Sort Key?**
+   **Answer:**
+   - **Partition Key**: The primary key attribute used for partitioning data. All items with the same partition key are stored in the same partition, and DynamoDB uses it to distribute data across multiple servers.
+   - **Sort Key**: A secondary key that allows multiple items with the same partition key to be stored in order. The sort key enables you to query and retrieve items with the same partition key but in different sort order.
+
+---
+
+### 6. **Explain the concept of “Provisioned” vs. “On-Demand” capacity mode.**
+   **Answer:**
+   - **Provisioned Mode**: In this mode, you specify the number of read and write capacity units (RCUs and WCUs) required for your table. You manage the capacity based on your application's needs, and if the demand exceeds the provisioned throughput, the requests can be throttled.
+   - **On-Demand Mode**: DynamoDB automatically adjusts the table's throughput capacity to handle the workload. You don't need to specify the read and write capacity, and it adjusts to meet the traffic requirements.
+
+---
+
+### 7. **What are Read and Write Capacity Units (RCU & WCU)?**
+   **Answer:**
+   - **RCU (Read Capacity Unit)**: One RCU allows you to read up to 4 KB per second. If the item is smaller than 4 KB, one RCU is sufficient for one strongly consistent read or two eventually consistent reads.
+   - **WCU (Write Capacity Unit)**: One WCU allows you to write up to 1 KB per second. Each write operation consumes one WCU, regardless of whether the item is small or large, as long as it is within 1 KB.
+
+---
+
+### 8. **What is the purpose of DynamoDB Streams?**
+   **Answer:**
+   DynamoDB Streams captures changes (inserts, updates, and deletes) made to items in DynamoDB tables and stores them for up to 24 hours. It allows you to perform real-time processing, such as:
+   - Triggering Lambda functions for event-driven applications.
+   - Synchronizing data to other systems.
+   - Capturing audit logs or implementing CQRS (Command Query Responsibility Segregation).
+
+---
+
+### 9. **What are Global Secondary Indexes (GSI) and Local Secondary Indexes (LSI)?**
+   **Answer:**
+   - **Global Secondary Index (GSI)**: Allows you to query a DynamoDB table using a different partition key and sort key than the table’s primary key. GSIs can span across all partitions and are not limited by the base table's partition key.
+   - **Local Secondary Index (LSI)**: Allows you to create an alternate sort key for the same partition key, enabling you to perform different types of queries within a partition. LSIs must be defined when the table is created and can’t be added later.
+
+---
+
+### 10. **What is a conditional write in DynamoDB?**
+   **Answer:**
+   A conditional write is a write operation (put, update, or delete) that is executed only if a specified condition is met. If the condition fails, the write operation is not performed. This can help in implementing optimistic concurrency control, avoiding overwriting items that have changed since you last read them.
+
+---
+
+### 11. **How does DynamoDB handle eventual consistency?**
+   **Answer:**
+   DynamoDB is eventually consistent by default, meaning that when you perform a read operation, the data might not reflect the most recent write immediately. However, it will eventually become consistent after a short delay. DynamoDB also supports strongly consistent reads, which return the most up-to-date data but come with higher latency and throughput costs.
+
+---
+
+### 12. **What are transactions in DynamoDB?**
+   **Answer:**
+   DynamoDB supports ACID transactions, enabling you to execute multiple operations (Put, Update, Delete) on one or more items in a table or across multiple tables atomically. This ensures that either all operations in the transaction succeed, or none of them are applied, providing consistency across multiple items.
+
+---
+
+### 13. **What are the common use cases for DynamoDB?**
+   **Answer:**
+   - **Session Management**: Storing session data for web applications.
+   - **Real-Time Analytics**: Storing and analyzing time-series data, such as IoT telemetry.
+   - **Mobile Apps**: Storing user preferences, profiles, and other application data.
+   - **Leaderboards**: Maintaining leaderboards in gaming applications.
+   - **Content Management**: Managing content metadata and other semi-structured data.
+
+---
+
+### 14. **What are the limitations of DynamoDB?**
+   **Answer:**
+   - **Large Item Size**: DynamoDB has a maximum item size of 400 KB.
+   - **Limited Query Capabilities**: Complex queries (e.g., joins, aggregations) are not supported natively in DynamoDB.
+   - **Eventually Consistent Reads**: By default, reads are eventually consistent, meaning that the data returned might not always be up-to-date.
+   - **Capacity Planning**: In provisioned mode, you need to manage throughput capacity, which can become difficult for unpredictable workloads.
+
+---
+
+### 15. **How would you optimize performance in DynamoDB?**
+   **Answer:**
+   - **Use appropriate indexes**: Create GSIs and LSIs to allow more efficient queries.
+   - **Use efficient partition keys**: Distribute data evenly across partitions to avoid "hot partitions."
+   - **Optimize throughput**: Use On-Demand mode if the traffic is unpredictable or use provisioned mode with auto-scaling for more control.
+   - **Leverage DynamoDB Accelerator (DAX)**: For caching to reduce read latency.
+   - **Limit scan operations**: Use queries instead of scans whenever possible, as scans are more resource-intensive.
+
+
+roll no
+name
+class
+subject
+
+
+rollno
+school
+address
+
+rollno
+phone
+parents phone no
+
