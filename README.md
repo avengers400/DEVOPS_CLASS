@@ -5,3 +5,5 @@ for aws ec2:- https://www.youtube.com/watch?v=ATeu9UEUx6w&list=PLiH9_MU-6RjI9gdF
 load balancer:- https://www.youtube.com/watch?v=eKL4LBjpZv8&list=PLBGx66SQNZ8a_y_CMLHchyHz_R6-6i-i_&index=58
 auto scaling:- https://www.youtube.com/watch?v=mLJImHSh-tc&list=PLBGx66SQNZ8a_y_CMLHchyHz_R6-6i-i_&index=54
 
+Jenkins installation on AWS:- https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
+
