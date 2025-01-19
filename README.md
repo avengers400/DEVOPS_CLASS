@@ -8,3 +8,5 @@ auto scaling:- https://www.youtube.com/watch?v=mLJImHSh-tc&list=PLBGx66SQNZ8a_y_
 Jenkins installation on AWS:- https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 maven installation on aws linux ec2:- https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.34/bin/apache-tomcat-10.1.34.tar.gz
 
+
++++++++++++++++++++++++++++++
